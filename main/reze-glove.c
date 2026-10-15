@@ -12,7 +12,7 @@ static const char *TAG = "NEOPIXEL";
 #define LED_COUNT 20
 
 #define PRESS_MS 500
-#define DEBOUNCE_MS 60
+#define DEBOUNCE_MS 100
 
 TaskHandle_t mainTaskHandle = nullptr;
 volatile TickType_t lastEdge = 0;
@@ -21,6 +21,9 @@ volatile TickType_t lastEdge = 0;
 static void IRAM_ATTR button_isr(void *arg) {
     TickType_t now = xTaskGetTickCountFromISR();
     if((now - lastEdge < pdMS_TO_TICKS(DEBOUNCE_MS))) {
+        return;
+    }
+    if (gpio_get_level(BUTTON_GPIO) != 0) {
         return;
     }
     lastEdge = now;

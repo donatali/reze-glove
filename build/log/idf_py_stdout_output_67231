@@ -1,0 +1,396 @@
+Command: /Users/natalie/.espressif/tools/python/v6.1/venv/bin/python /Users/natalie/.espressif/v6.1/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem1101 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /Users/natalie/Documents/reze-glove/build/reze-glove.elf /Users/natalie/Documents/reze-glove/build/bootloader/bootloader.elf -m '/Users/natalie/.espressif/tools/python/v6.1/venv/bin/python' '/Users/natalie/.espressif/v6.1/esp-idf/tools/idf.py'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40383e22
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5830,len:0x155c
+load:0x403cbf10,len:0xd10
+load:0x403ce710,len:0x2fdc
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v6.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Oct 12 2026 15:37:02[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (25) boot: efuse block revision: v1.3[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (66) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=09530h ( 38192) map[0m
+[0;32mI (89) esp_image: segment 1: paddr=00019558 vaddr=3fc8a800 size=01a94h (  6804) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001aff4 vaddr=40380000 size=05024h ( 20516) load[0m
+[0;32mI (102) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=14f58h ( 85848) map[0m
+[0;32mI (119) esp_image: segment 4: paddr=00034f80 vaddr=40385024 size=05764h ( 22372) load[0m
+[0;32mI (124) esp_image: segment 5: paddr=0003a6ec vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (127) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (128) boot: Disabling RNG early entropy source...[0m
+[0;32mI (144) cpu_start: Unicore app[0m
+[0;32mI (152) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (153) cpu_start: Pro cpu start user code[0m
+[0;32mI (153) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (155) app_init: Application information:[0m
+[0;32mI (158) app_init: Project name:     reze-glove[0m
+[0;32mI (163) app_init: App version:      1[0m
+[0;32mI (166) app_init: Compile time:     Oct 12 2026 15:35:53[0m
+[0;32mI (171) app_init: ELF file SHA256:  434732d5a...[0m
+[0;32mI (175) app_init: ESP-IDF:          v6.1[0m
+[0;32mI (179) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (183) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (187) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (191) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (197) heap_init: At 3FC8D300 len 00032D00 (203 KiB): RAM[0m
+[0;32mI (202) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (208) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (214) heap_init: At 50000024 len 00001FC4 (7 KiB): RTCRAM[0m
+[0;32mI (220) spi_flash: detected chip: generic[0m
+[0;32mI (223) spi_flash: flash io: dio[0m
+[0;33mW (226) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (239) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (245) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (252) main_task: Started on CPU0[0m
+[0;32mI (252) main_task: Calling app_main()[0m
+[0;32mI (252) NEOPIXEL: Button: 1[0m
+[0;32mI (352) NEOPIXEL: Button: 1[0m
+[0;32mI (452) NEOPIXEL: Button: 1[0m
+[0;32mI (552) NEOPIXEL: Button: 1[0m
+[0;32mI (652) NEOPIXEL: Button: 1[0m
+[0;32mI (752) NEOPIXEL: Button: 1[0m
+[0;32mI (852) NEOPIXEL: Button: 1[0m
+[0;32mI (952) NEOPIXEL: Button: 1[0m
+[0;32mI (1052) NEOPIXEL: Button: 1[0m
+[0;32mI (1152) NEOPIXEL: Button: 1[0m
+[0;32mI (1252) NEOPIXEL: Button: 1[0m
+[0;32mI (1352) NEOPIXEL: Button: 1[0m
+[0;32mI (1452) NEOPIXEL: Button: 1[0m
+[0;32mI (1552) NEOPIXEL: Button: 1[0m
+[0;32mI (1652) NEOPIXEL: Button: 1[0m
+[0;32mI (1752) NEOPIXEL: Button: 1[0m
+[0;32mI (1852) NEOPIXEL: Button: 1[0m
+[0;32mI (1952) NEOPIXEL: Button: 1[0m
+[0;32mI (2052) NEOPIXEL: Button: 1[0m
+[0;32mI (2152) NEOPIXEL: Button: 1[0m
+[0;32mI (2252) NEOPIXEL: Button: 1[0m
+[0;32mI (2352) NEOPIXEL: Button: 1[0m
+[0;32mI (2452) NEOPIXEL: Button: 1[0m
+[0;32mI (2552) NEOPIXEL: Button: 1[0m
+[0;32mI (2652) NEOPIXEL: Button: 1[0m
+[0;32mI (2752) NEOPIXEL: Button: 1[0m
+[0;32mI (2852) NEOPIXEL: Button: 1[0m
+[0;32mI (2952) NEOPIXEL: Button: 1[0m
+[0;32mI (3052) NEOPIXEL: Button: 1[0m
+[0;32mI (3152) NEOPIXEL: Button: 1[0m
+[0;32mI (3252) NEOPIXEL: Button: 1[0m
+[0;32mI (3352) NEOPIXEL: Button: 1[0m
+[0;32mI (3452) NEOPIXEL: Button: 1[0m
+[0;32mI (3552) NEOPIXEL: Button: 1[0m
+[0;32mI (3652) NEOPIXEL: Button: 1[0m
+[0;32mI (3752) NEOPIXEL: Button: 1[0m
+[0;32mI (3852) NEOPIXEL: Button: 1[0m
+[0;32mI (3952) NEOPIXEL: Button: 1[0m
+[0;32mI (4052) NEOPIXEL: Button: 1[0m
+[0;32mI (4152) NEOPIXEL: Button: 1[0m
+[0;32mI (4252) NEOPIXEL: Button: 1[0m
+[0;32mI (4352) NEOPIXEL: Button: 1[0m
+[0;32mI (4452) NEOPIXEL: Button: 1[0m
+[0;32mI (4552) NEOPIXEL: Button: 1[0m
+[0;32mI (4652) NEOPIXEL: Button: 1[0m
+[0;32mI (4752) NEOPIXEL: Button: 1[0m
+[0;32mI (4852) NEOPIXEL: Button: 1[0m
+[0;32mI (4952) NEOPIXEL: Button: 1[0m
+[0;32mI (5052) NEOPIXEL: Button: 1[0m
+[0;32mI (5152) NEOPIXEL: Button: 1[0m
+[0;32mI (5252) NEOPIXEL: Button: 1[0m
+[0;32mI (5352) NEOPIXEL: Button: 1[0m
+[0;32mI (5452) NEOPIXEL: Button: 1[0m
+[0;32mI (5552) NEOPIXEL: Button: 1[0m
+[0;32mI (5652) NEOPIXEL: Button: 1[0m
+[0;32mI (5752) NEOPIXEL: Button: 1[0m
+[0;32mI (5852) NEOPIXEL: Button: 1[0m
+[0;32mI (5952) NEOPIXEL: Button: 1[0m
+[0;32mI (6052) NEOPIXEL: Button: 1[0m
+[0;32mI (6152) NEOPIXEL: Button: 1[0m
+[0;32mI (6252) NEOPIXEL: Button: 1[0m
+[0;32mI (6352) NEOPIXEL: Button: 1[0m
+[0;32mI (6452) NEOPIXEL: Button: 1[0m
+[0;32mI (6552) NEOPIXEL: Button: 1[0m
+[0;32mI (6652) NEOPIXEL: Button: 1[0m
+[0;32mI (6752) NEOPIXEL: Button: 1[0m
+[0;32mI (6852) NEOPIXEL: Button: 1[0m
+[0;32mI (6952) NEOPIXEL: Button: 1[0m
+[0;32mI (7052) NEOPIXEL: Button: 1[0m
+[0;32mI (7152) NEOPIXEL: Button: 1[0m
+[0;32mI (7252) NEOPIXEL: Button: 1[0m
+[0;32mI (7352) NEOPIXEL: Button: 1[0m
+[0;32mI (7452) NEOPIXEL: Button: 1[0m
+[0;32mI (7552) NEOPIXEL: Button: 1[0m
+[0;32mI (7652) NEOPIXEL: Button: 1[0m
+[0;32mI (7752) NEOPIXEL: Button: 1[0m
+[0;32mI (7852) NEOPIXEL: Button: 1[0m
+[0;32mI (7952) NEOPIXEL: Button: 1[0m
+[0;32mI (8052) NEOPIXEL: Button: 1[0m
+[0;32mI (8152) NEOPIXEL: Button: 1[0m
+[0;32mI (8252) NEOPIXEL: Button: 1[0m
+[0;32mI (8352) NEOPIXEL: Button: 1[0m
+[0;32mI (8452) NEOPIXEL: Button: 1[0m
+[0;32mI (8552) NEOPIXEL: Button: 1[0m
+[0;32mI (8652) NEOPIXEL: Button: 1[0m
+[0;32mI (8752) NEOPIXEL: Button: 1[0m
+[0;32mI (8852) NEOPIXEL: Button: 1[0m
+[0;32mI (8952) NEOPIXEL: Button: 1[0m
+[0;32mI (9052) NEOPIXEL: Button: 1[0m
+[0;32mI (9152) NEOPIXEL: Button: 1[0m
+[0;32mI (9252) NEOPIXEL: Button: 1[0m
+[0;32mI (9352) NEOPIXEL: Button: 1[0m
+[0;32mI (9452) NEOPIXEL: Button: 1[0m
+[0;32mI (9552) NEOPIXEL: Button: 1[0m
+[0;32mI (9652) NEOPIXEL: Button: 1[0m
+[0;32mI (9752) NEOPIXEL: Button: 1[0m
+[0;32mI (9852) NEOPIXEL: Button: 1[0m
+[0;32mI (9952) NEOPIXEL: Button: 1[0m
+[0;32mI (10052) NEOPIXEL: Button: 1[0m
+[0;32mI (10152) NEOPIXEL: Button: 1[0m
+[0;32mI (10252) NEOPIXEL: Button: 1[0m
+[0;32mI (10352) NEOPIXEL: Button: 1[0m
+[0;32mI (10452) NEOPIXEL: Button: 1[0m
+[0;32mI (10552) NEOPIXEL: Button: 1[0m
+[0;32mI (10652) NEOPIXEL: Button: 1[0m
+[0;32mI (10752) NEOPIXEL: Button: 1[0m
+[0;32mI (10852) NEOPIXEL: Button: 0[0m
+[0;32mI (10952) NEOPIXEL: Button: 0[0m
+[0;32mI (11052) NEOPIXEL: Button: 0[0m
+[0;32mI (11152) NEOPIXEL: Button: 0[0m
+[0;32mI (11252) NEOPIXEL: Button: 0[0m
+[0;32mI (11352) NEOPIXEL: Button: 0[0m
+[0;32mI (11452) NEOPIXEL: Button: 0[0m
+[0;32mI (11552) NEOPIXEL: Button: 0[0m
+[0;32mI (11652) NEOPIXEL: Button: 0[0m
+[0;32mI (11752) NEOPIXEL: Button: 0[0m
+[0;32mI (11852) NEOPIXEL: Button: 0[0m
+[0;32mI (11952) NEOPIXEL: Button: 0[0m
+[0;32mI (12052) NEOPIXEL: Button: 0[0m
+[0;32mI (12152) NEOPIXEL: Button: 0[0m
+[0;32mI (12252) NEOPIXEL: Button: 0[0m
+[0;32mI (12352) NEOPIXEL: Button: 0[0m
+[0;32mI (12452) NEOPIXEL: Button: 0[0m
+[0;32mI (12552) NEOPIXEL: Button: 0[0m
+[0;32mI (12652) NEOPIXEL: Button: 0[0m
+[0;32mI (12752) NEOPIXEL: Button: 0[0m
+[0;32mI (12852) NEOPIXEL: Button: 0[0m
+[0;32mI (12952) NEOPIXEL: Button: 0[0m
+[0;32mI (13052) NEOPIXEL: Button: 0[0m
+[0;32mI (13152) NEOPIXEL: Button: 0[0m
+[0;32mI (13252) NEOPIXEL: Button: 0[0m
+[0;32mI (13352) NEOPIXEL: Button: 0[0m
+[0;32mI (13452) NEOPIXEL: Button: 0[0m
+[0;32mI (13552) NEOPIXEL: Button: 1[0m
+[0;32mI (13652) NEOPIXEL: Button: 1[0m
+[0;32mI (13752) NEOPIXEL: Button: 1[0m
+[0;32mI (13852) NEOPIXEL: Button: 1[0m
+[0;32mI (13952) NEOPIXEL: Button: 1[0m
+[0;32mI (14052) NEOPIXEL: Button: 1[0m
+[0;32mI (14152) NEOPIXEL: Button: 1[0m
+[0;32mI (14252) NEOPIXEL: Button: 0[0m
+[0;32mI (14352) NEOPIXEL: Button: 0[0m
+[0;32mI (14452) NEOPIXEL: Button: 0[0m
+[0;32mI (14552) NEOPIXEL: Button: 0[0m
+[0;32mI (14652) NEOPIXEL: Button: 0[0m
+[0;32mI (14752) NEOPIXEL: Button: 0[0m
+[0;32mI (14852) NEOPIXEL: Button: 0[0m
+[0;32mI (14952) NEOPIXEL: Button: 0[0m
+[0;32mI (15052) NEOPIXEL: Button: 0[0m
+[0;32mI (15152) NEOPIXEL: Button: 0[0m
+[0;32mI (15252) NEOPIXEL: Button: 0[0m
+[0;32mI (15352) NEOPIXEL: Button: 0[0m
+[0;32mI (15452) NEOPIXEL: Button: 0[0m
+[0;32mI (15552) NEOPIXEL: Button: 0[0m
+[0;32mI (15652) NEOPIXEL: Button: 0[0m
+[0;32mI (15752) NEOPIXEL: Button: 0[0m
+[0;32mI (15852) NEOPIXEL: Button: 0[0m
+[0;32mI (15952) NEOPIXEL: Button: 0[0m
+[0;32mI (16052) NEOPIXEL: Button: 0[0m
+[0;32mI (16152) NEOPIXEL: Button: 1[0m
+[0;32mI (16252) NEOPIXEL: Button: 1[0m
+[0;32mI (16352) NEOPIXEL: Button: 1[0m
+[0;32mI (16452) NEOPIXEL: Button: 1[0m
+[0;32mI (16552) NEOPIXEL: Button: 1[0m
+[0;32mI (16652) NEOPIXEL: Button: 1[0m
+[0;32mI (16752) NEOPIXEL: Button: 1[0m
+[0;32mI (16852) NEOPIXEL: Button: 0[0m
+[0;32mI (16952) NEOPIXEL: Button: 0[0m
+[0;32mI (17052) NEOPIXEL: Button: 0[0m
+[0;32mI (17152) NEOPIXEL: Button: 0[0m
+[0;32mI (17252) NEOPIXEL: Button: 0[0m
+[0;32mI (17352) NEOPIXEL: Button: 0[0m
+[0;32mI (17452) NEOPIXEL: Button: 0[0m
+[0;32mI (17552) NEOPIXEL: Button: 0[0m
+[0;32mI (17652) NEOPIXEL: Button: 0[0m
+[0;32mI (17752) NEOPIXEL: Button: 0[0m
+[0;32mI (17852) NEOPIXEL: Button: 0[0m
+[0;32mI (17952) NEOPIXEL: Button: 0[0m
+[0;32mI (18052) NEOPIXEL: Button: 0[0m
+[0;32mI (18152) NEOPIXEL: Button: 0[0m
+[0;32mI (18252) NEOPIXEL: Button: 0[0m
+[0;32mI (18352) NEOPIXEL: Button: 0[0m
+[0;32mI (18452) NEOPIXEL: Button: 0[0m
+[0;32mI (18552) NEOPIXEL: Button: 0[0m
+[0;32mI (18652) NEOPIXEL: Button: 0[0m
+[0;32mI (18752) NEOPIXEL: Button: 0[0m
+[0;32mI (18852) NEOPIXEL: Button: 0[0m
+[0;32mI (18952) NEOPIXEL: Button: 0[0m
+[0;32mI (19052) NEOPIXEL: Button: 0[0m
+[0;32mI (19152) NEOPIXEL: Button: 0[0m
+[0;32mI (19252) NEOPIXEL: Button: 0[0m
+[0;32mI (19352) NEOPIXEL: Button: 0[0m
+[0;32mI (19452) NEOPIXEL: Button: 0[0m
+[0;32mI (19552) NEOPIXEL: Button: 0[0m
+[0;32mI (19652) NEOPIXEL: Button: 0[0m
+[0;32mI (19752) NEOPIXEL: Button: 0[0m
+[0;32mI (19852) NEOPIXEL: Button: 0[0m
+[0;32mI (19952) NEOPIXEL: Button: 0[0m
+[0;32mI (20052) NEOPIXEL: Button: 0[0m
+[0;32mI (20152) NEOPIXEL: Button: 0[0m
+[0;32mI (20252) NEOPIXEL: Button: 0[0m
+[0;32mI (20352) NEOPIXEL: Button: 0[0m
+[0;32mI (20452) NEOPIXEL: Button: 0[0m
+[0;32mI (20552) NEOPIXEL: Button: 0[0m
+[0;32mI (20652) NEOPIXEL: Button: 0[0m
+[0;32mI (20752) NEOPIXEL: Button: 0[0m
+[0;32mI (20852) NEOPIXEL: Button: 0[0m
+[0;32mI (20952) NEOPIXEL: Button: 0[0m
+[0;32mI (21052) NEOPIXEL: Button: 0[0m
+[0;32mI (21152) NEOPIXEL: Button: 0[0m
+[0;32mI (21252) NEOPIXEL: Button: 0[0m
+[0;32mI (21352) NEOPIXEL: Button: 0[0m
+[0;32mI (21452) NEOPIXEL: Button: 0[0m
+[0;32mI (21552) NEOPIXEL: Button: 0[0m
+[0;32mI (21652) NEOPIXEL: Button: 0[0m
+[0;32mI (21752) NEOPIXEL: Button: 0[0m
+[0;32mI (21852) NEOPIXEL: Button: 0[0m
+[0;32mI (21952) NEOPIXEL: Button: 0[0m
+[0;32mI (22052) NEOPIXEL: Button: 0[0m
+[0;32mI (22152) NEOPIXEL: Button: 0[0m
+[0;32mI (22252) NEOPIXEL: Button: 0[0m
+[0;32mI (22352) NEOPIXEL: Button: 0[0m
+[0;32mI (22452) NEOPIXEL: Button: 0[0m
+[0;32mI (22552) NEOPIXEL: Button: 0[0m
+[0;32mI (22652) NEOPIXEL: Button: 0[0m
+[0;32mI (22752) NEOPIXEL: Button: 0[0m
+[0;32mI (22852) NEOPIXEL: Button: 0[0m
+[0;32mI (22952) NEOPIXEL: Button: 1[0m
+[0;32mI (23052) NEOPIXEL: Button: 1[0m
+[0;32mI (23152) NEOPIXEL: Button: 1[0m
+[0;32mI (23252) NEOPIXEL: Button: 1[0m
+[0;32mI (23352) NEOPIXEL: Button: 1[0m
+[0;32mI (23452) NEOPIXEL: Button: 1[0m
+[0;32mI (23552) NEOPIXEL: Button: 1[0m
+[0;32mI (23652) NEOPIXEL: Button: 1[0m
+[0;32mI (23752) NEOPIXEL: Button: 1[0m
+[0;32mI (23852) NEOPIXEL: Button: 0[0m
+[0;32mI (23952) NEOPIXEL: Button: 0[0m
+[0;32mI (24052) NEOPIXEL: Button: 1[0m
+[0;32mI (24152) NEOPIXEL: Button: 1[0m
+[0;32mI (24252) NEOPIXEL: Button: 1[0m
+[0;32mI (24352) NEOPIXEL: Button: 1[0m
+[0;32mI (24452) NEOPIXEL: Button: 1[0m
+[0;32mI (24552) NEOPIXEL: Button: 1[0m
+[0;32mI (24652) NEOPIXEL: Button: 1[0m
+[0;32mI (24752) NEOPIXEL: Button: 0[0m
+[0;32mI (24852) NEOPIXEL: Button: 0[0m
+[0;32mI (24952) NEOPIXEL: Button: 0[0m
+[0;32mI (25052) NEOPIXEL: Button: 1[0m
+[0;32mI (25152) NEOPIXEL: Button: 1[0m
+[0;32mI (25252) NEOPIXEL: Button: 1[0m
+[0;32mI (25352) NEOPIXEL: Button: 1[0m
+[0;32mI (25452) NEOPIXEL: Button: 1[0m
+[0;32mI (25552) NEOPIXEL: Button: 1[0m
+[0;32mI (25652) NEOPIXEL: Button: 1[0m
+[0;32mI (25752) NEOPIXEL: Button: 0[0m
+[0;32mI (25852) NEOPIXEL: Button: 1[0m
+[0;32mI (25952) NEOPIXEL: Button: 1[0m
+[0;32mI (26052) NEOPIXEL: Button: 1[0m
+[0;32mI (26152) NEOPIXEL: Button: 1[0m
+[0;32mI (26252) NEOPIXEL: Button: 1[0m
+[0;32mI (26352) NEOPIXEL: Button: 1[0m
+[0;32mI (26452) NEOPIXEL: Button: 1[0m
+[0;32mI (26552) NEOPIXEL: Button: 1[0m
+[0;32mI (26652) NEOPIXEL: Button: 0[0m
+[0;32mI (26752) NEOPIXEL: Button: 1[0m
+[0;32mI (26852) NEOPIXEL: Button: 1[0m
+[0;32mI (26952) NEOPIXEL: Button: 1[0m
+[0;32mI (27052) NEOPIXEL: Button: 1[0m
+[0;32mI (27152) NEOPIXEL: Button: 1[0m
+[0;32mI (27252) NEOPIXEL: Button: 1[0m
+[0;32mI (27352) NEOPIXEL: Button: 1[0m
+[0;32mI (27452) NEOPIXEL: Button: 1[0m
+[0;32mI (27552) NEOPIXEL: Button: 0[0m
+[0;32mI (27652) NEOPIXEL: Button: 1[0m
+[0;32mI (27752) NEOPIXEL: Button: 1[0m
+[0;32mI (27852) NEOPIXEL: Button: 1[0m
+[0;32mI (27952) NEOPIXEL: Button: 1[0m
+[0;32mI (28052) NEOPIXEL: Button: 1[0m
+[0;32mI (28152) NEOPIXEL: Button: 1[0m
+[0;32mI (28252) NEOPIXEL: Button: 1[0m
+[0;32mI (28352) NEOPIXEL: Button: 1[0m
+[0;32mI (28452) NEOPIXEL: Button: 1[0m
+[0;32mI (28552) NEOPIXEL: Button: 0[0m
+[0;32mI (28652) NEOPIXEL: Button: 1[0m
+[0;32mI (28752) NEOPIXEL: Button: 1[0m
+[0;32mI (28852) NEOPIXEL: Button: 1[0m
+[0;32mI (28952) NEOPIXEL: Button: 1[0m
+[0;32mI (29052) NEOPIXEL: Button: 1[0m
+[0;32mI (29152) NEOPIXEL: Button: 1[0m
+[0;32mI (29252) NEOPIXEL: Button: 1[0m
+[0;32mI (29352) NEOPIXEL: Button: 1[0m
+[0;32mI (29452) NEOPIXEL: Button: 1[0m
+[0;32mI (29552) NEOPIXEL: Button: 1[0m
+[0;32mI (29652) NEOPIXEL: Button: 0[0m
+[0;32mI (29752) NEOPIXEL: Button: 1[0m
+[0;32mI (29852) NEOPIXEL: Button: 0[0m
+[0;32mI (29952) NEOPIXEL: Button: 1[0m
+[0;32mI (30052) NEOPIXEL: Button: 1[0m
+[0;32mI (30152) NEOPIXEL: Button: 1[0m
+[0;32mI (30252) NEOPIXEL: Button: 1[0m
+[0;32mI (30352) NEOPIXEL: Button: 0[0m
+[0;32mI (30452) NEOPIXEL: Button: 0[0m
+[0;32mI (30552) NEOPIXEL: Button: 0[0m
+[0;32mI (30652) NEOPIXEL: Button: 0[0m
+[0;32mI (30752) NEOPIXEL: Button: 1[0m
+[0;32mI (30852) NEOPIXEL: Button: 1[0m
+[0;32mI (30952) NEOPIXEL: Button: 1[0m
+[0;32mI (31052) NEOPIXEL: Button: 0[0m
+[0;32mI (31152) NEOPIXEL: Button: 0[0m
+[0;32mI (31252) NEOPIXEL: Button: 0[0m
+[0;32mI (31352) NEOPIXEL: Button: 0[0m
+[0;32mI (31452) NEOPIXEL: Button: 1[0m
+[0;32mI (31552) NEOPIXEL: Button: 1[0m
+[0;32mI (31652) NEOPIXEL: Button: 1[0m
+[0;32mI (31752) NEOPIXEL: Button: 0[0m
+[0;32mI (31852) NEOPIXEL: Button: 0[0m
+[0;32mI (31952) NEOPIXEL: Button: 0[0m
+[0;32mI (32052) NEOPIXEL: Button: 1[0m
+[0;32mI (32152) NEOPIXEL: Button: 1[0m
+[0;32mI (32252) NEOPIXEL: Button: 1[0m
+[0;32mI (32352) NEOPIXEL: Button: 1[0m
+[0;32mI (32452) NEOPIXEL: Button: 1[0m
+[0;32mI (32552) NEOPIXEL: Button: 1[0m
+[0;32mI (32652) NEOPIXEL: Button: 1[0m
+[0;32mI (32752) NEOPIXEL: Button: 1[0m
+[0;32mI (32852) NEOPIXEL: Button: 1[0m
+[0;32mI (32952) NEOPIXEL: Button: 1[0m
+[0;32mI (33052) NEOPIXEL: Button: 1[0m
+[0;32mI (33152) NEOPIXEL: Button: 1[0m
+[0;32mI (33252) NEOPIXEL: Button: 1[0m
+[0;32mI (33352) NEOPIXEL: Button: 1[0m
+[0;32mI (33452) NEOPIXEL: Button: 1[0m
+[0;32mI (33552) NEOPIXEL: Button: 1[0m
+[0;32mI (33652) NEOPIXEL: Button: 1[0m
+[0;32mI (33752) NEOPIXEL: Button: 1[0m
+[0;32mI (33852) NEOPIXEL: Button: 1[0m
+[0;32mI (33952) NEOPIXEL: Button: 1[0m
