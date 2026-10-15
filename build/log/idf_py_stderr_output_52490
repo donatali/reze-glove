@@ -1,0 +1,8 @@
+Command: /Users/natalie/.espressif/tools/python/v6.1/venv/bin/python /Users/natalie/.espressif/v6.1/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem1101 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /Users/natalie/Documents/reze-glove/build/reze-glove.elf /Users/natalie/Documents/reze-glove/build/bootloader/bootloader.elf -m '/Users/natalie/.espressif/tools/python/v6.1/venv/bin/python' '/Users/natalie/.espressif/v6.1/esp-idf/tools/idf.py'
+--- esp-idf-monitor 1.10.0 on /dev/cu.usbmodem1101 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+--- 0x4004c72e: recv_packet in ROM
+--- 0x403cbf10: esp_bootloader_get_description at /Users/natalie/.espressif/v6.1/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:40
+--- 0x403ce710: is_xmc_chip_strict at /Users/natalie/.espressif/v6.1/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash.c:911
+--- 0x403cbf1a: call_start_cpu0 at /Users/natalie/.espressif/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+
