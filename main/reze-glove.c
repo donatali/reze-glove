@@ -35,17 +35,31 @@ static void IRAM_ATTR button_isr(void *arg) {
     }
 }
 
-void set_color(led_strip_handle_t led_strip, uint32_t color)
-{
+void set_color(led_strip_handle_t led_strip, uint32_t color, const uint32_t led_nums[], size_t count) {
     uint8_t red   = (color >> 16) & 0xFF;
     uint8_t green = (color >> 8)  & 0xFF;
     uint8_t blue  = color & 0xFF;
 
-    for (int i = 0; i < LED_COUNT; i++) {
-        led_strip_set_pixel(led_strip, i, red, green, blue);
+    for(size_t i = 0; i < count; ++i){
+        led_strip_set_pixel(led_strip, led_nums[i], red, green, blue);
     }
 
     led_strip_refresh(led_strip);
+}
+
+void fade_into(led_strip_handle_t led_strip, uint32_t color, const uint32_t led_nums[], size_t count) {
+    uint8_t red   = (color >> 16) & 0xFF;
+    uint8_t green = (color >> 8)  & 0xFF;
+    uint8_t blue  = color & 0xFF;
+
+    for(int i = 0; i <= 50; i++) {
+        for(size_t j = 0; j < count; j++){
+            led_strip_set_pixel(led_strip, led_nums[j], red*i/50, green*i/50, blue*i/50);
+        }
+        led_strip_refresh(led_strip);
+        vTaskDelay(pdMS_TO_TICKS(50));
+    }
+    
 }
 
 void app_main(void)
@@ -87,7 +101,11 @@ void app_main(void)
     gpio_install_isr_service(0);
     gpio_isr_handler_add(BUTTON_GPIO, button_isr, nullptr);
 
+    uint32_t my_array[] = {1, 3, 5};
+    size_t array_count = 3;
+
     while(true) {
+        led_strip_clear(led_strip);
         uint32_t clicks = 0;
         uint32_t pressEvent = 0;
         xTaskNotifyWait(0, UINT32_MAX, &pressEvent, portMAX_DELAY); //first wake
@@ -108,40 +126,33 @@ void app_main(void)
 
         if(clicks == 1) { //ONE PRESS
             ESP_LOGI(TAG, "First press");
-            for(int i = 0; i < LED_COUNT; ++i) {
-                led_strip_set_pixel(led_strip, i, 255, i*5, 0);
-                led_strip_refresh(led_strip);
-                vTaskDelay(pdMS_TO_TICKS(50));
-            }
+            fade_into(led_strip, 0xFF0000, my_array, sizeof(my_array) / sizeof(my_array[0]));
             vTaskDelay(pdMS_TO_TICKS(1000));
-            led_strip_clear(led_strip);
         }
 
         else if(clicks == 2) { //TWO PRESS
             ESP_LOGI(TAG, "Second press");
             led_strip_clear(led_strip);
-            set_color(led_strip, 0xFFA500);
+            set_color(led_strip, 0xFFA500, my_array, array_count);
             vTaskDelay(pdMS_TO_TICKS(1000));
             led_strip_clear(led_strip);
             vTaskDelay(pdMS_TO_TICKS(1000));
-            set_color(led_strip, 0xFFA500);
+            set_color(led_strip, 0xFFA500, my_array, array_count);
             vTaskDelay(pdMS_TO_TICKS(1000));
             led_strip_clear(led_strip);
             vTaskDelay(pdMS_TO_TICKS(1000));
-            set_color(led_strip, 0xFFA500);
+            set_color(led_strip, 0xFFA500, my_array, array_count);
             vTaskDelay(pdMS_TO_TICKS(1000));
             led_strip_clear(led_strip);
         }
 
         else if(clicks == 3) { //THIRD PRESS
             ESP_LOGI(TAG, "Third press");
-            set_color(led_strip, 0xFF0000);
+            set_color(led_strip, 0xFF0000, my_array, array_count);
             vTaskDelay(pdMS_TO_TICKS(5000));
-            led_strip_clear(led_strip);
         }
 
         uint32_t ignored;
         while (xTaskNotifyWait(0, UINT32_MAX, &ignored, 0) == pdTRUE) {}
-
     }
 }
