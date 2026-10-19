@@ -7,9 +7,9 @@
 
 static const char *TAG = "NEOPIXEL";
 
-#define LED_GPIO 1
-#define BUTTON_GPIO GPIO_NUM_0
-#define LED_COUNT 20
+#define LED_GPIO 0
+#define BUTTON_GPIO GPIO_NUM_10
+#define LED_COUNT 100
 
 #define PRESS_MS 500
 #define DEBOUNCE_MS 100
@@ -101,10 +101,15 @@ void app_main(void)
     gpio_install_isr_service(0);
     gpio_isr_handler_add(BUTTON_GPIO, button_isr, nullptr);
 
-    uint32_t my_array[] = {1, 3, 5};
-    size_t array_count = 3;
+    uint32_t my_array[] = {1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 99};
+    size_t array_count = sizeof(my_array) / sizeof(my_array[0]);
 
     while(true) {
+        // for(int i = 0; i < LED_COUNT; ++i){
+        //     led_strip_set_pixel(led_strip, i, 255, (i*5)%255, 0);
+        // }
+        // led_strip_refresh(led_strip);
+        // vTaskDelay(2000);
         led_strip_clear(led_strip);
         uint32_t clicks = 0;
         uint32_t pressEvent = 0;
@@ -126,7 +131,7 @@ void app_main(void)
 
         if(clicks == 1) { //ONE PRESS
             ESP_LOGI(TAG, "First press");
-            fade_into(led_strip, 0xFF0000, my_array, sizeof(my_array) / sizeof(my_array[0]));
+            fade_into(led_strip, 0xFF0000, my_array, array_count);
             vTaskDelay(pdMS_TO_TICKS(1000));
         }
 
