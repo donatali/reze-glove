@@ -1,0 +1,266 @@
+Command: /Users/natalie/.espressif/tools/python/v6.1/venv/bin/python /Users/natalie/.espressif/v6.1/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem11101 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /Users/natalie/Documents/reze-glove/build/reze-glove.elf /Users/natalie/Documents/reze-glove/build/bootloader/bootloader.elf -m '/Users/natalie/.espressif/tools/python/v6.1/venv/bin/python' '/Users/natalie/.espressif/v6.1/esp-idf/tools/idf.py'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40383f84
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5830,len:0x155c
+load:0x403cbf10,len:0xd10
+load:0x403ce710,len:0x2fdc
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v6.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Oct 23 2026 14:29:17[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (25) boot: efuse block revision: v1.3[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (66) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=09848h ( 38984) map[0m
+[0;32mI (89) esp_image: segment 1: paddr=00019870 vaddr=3fc8ac00 size=01a94h (  6804) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001b30c vaddr=40380000 size=04d0ch ( 19724) load[0m
+[0;32mI (101) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=15738h ( 87864) map[0m
+[0;32mI (119) esp_image: segment 4: paddr=00035760 vaddr=40384d0c size=05e34h ( 24116) load[0m
+[0;32mI (124) esp_image: segment 5: paddr=0003b59c vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (128) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (128) boot: Disabling RNG early entropy source...[0m
+[0;32mI (144) cpu_start: Unicore app[0m
+[0;32mI (153) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (153) cpu_start: Pro cpu start user code[0m
+[0;32mI (153) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (155) app_init: Application information:[0m
+[0;32mI (159) app_init: Project name:     reze-glove[0m
+[0;32mI (163) app_init: App version:      3d70b07-dirty[0m
+[0;32mI (167) app_init: Compile time:     Oct 23 2026 14:29:05[0m
+[0;32mI (172) app_init: ELF file SHA256:  971d85e55...[0m
+[0;32mI (177) app_init: ESP-IDF:          v6.1[0m
+[0;32mI (180) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (184) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (188) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (192) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (198) heap_init: At 3FC8D700 len 00032900 (202 KiB): RAM[0m
+[0;32mI (203) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (209) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (215) heap_init: At 50000024 len 00001FC4 (7 KiB): RTCRAM[0m
+[0;32mI (222) spi_flash: detected chip: generic[0m
+[0;32mI (225) spi_flash: flash io: dio[0m
+[0;33mW (227) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (240) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (246) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (253) main_task: Started on CPU0[0m
+[0;32mI (253) main_task: Calling app_main()[0m
+[0;32mI (1783) NEOPIXEL: IN PRESS......[0m
+[0;32mI (2283) NEOPIXEL: IN PRESS......[0m
+[0;32mI (2283) NEOPIXEL: Click count: 2[0m
+[0;32mI (2283) NEOPIXEL: Second press[0m
+[0;32mI (2283) NEOPIXEL: LED 0[0m
+[0;32mI (2883) NEOPIXEL: LED 1[0m
+[0;32mI (3483) NEOPIXEL: LED 2[0m
+[0;32mI (4083) NEOPIXEL: LED 3[0m
+[0;32mI (4683) NEOPIXEL: LED 4[0m
+[0;32mI (5283) NEOPIXEL: LED 5[0m
+[0;32mI (5883) NEOPIXEL: LED 6[0m
+[0;32mI (6483) NEOPIXEL: LED 7[0m
+[0;32mI (7083) NEOPIXEL: LED 8[0m
+[0;32mI (7683) NEOPIXEL: LED 9[0m
+[0;32mI (8283) NEOPIXEL: LED 10[0m
+[0;32mI (8883) NEOPIXEL: LED 11[0m
+[0;32mI (9483) NEOPIXEL: LED 12[0m
+[0;32mI (10083) NEOPIXEL: LED 13[0m
+[0;32mI (10683) NEOPIXEL: LED 14[0m
+[0;32mI (11283) NEOPIXEL: LED 15[0m
+[0;32mI (11883) NEOPIXEL: LED 16[0m
+[0;32mI (12483) NEOPIXEL: LED 17[0m
+[0;32mI (13083) NEOPIXEL: LED 18[0m
+[0;32mI (13683) NEOPIXEL: LED 19[0m
+[0;32mI (14283) NEOPIXEL: LED 20[0m
+[0;32mI (14883) NEOPIXEL: LED 21[0m
+[0;32mI (15483) NEOPIXEL: LED 22[0m
+[0;32mI (16083) NEOPIXEL: LED 23[0m
+[0;32mI (16683) NEOPIXEL: LED 24[0m
+[0;32mI (17283) NEOPIXEL: LED 25[0m
+[0;32mI (17883) NEOPIXEL: LED 26[0m
+[0;32mI (18483) NEOPIXEL: LED 27[0m
+[0;32mI (19083) NEOPIXEL: LED 28[0m
+[0;32mI (19683) NEOPIXEL: LED 29[0m
+[0;32mI (20283) NEOPIXEL: LED 30[0m
+[0;32mI (20883) NEOPIXEL: LED 31[0m
+[0;32mI (21483) NEOPIXEL: LED 32[0m
+[0;32mI (22083) NEOPIXEL: LED 33[0m
+[0;32mI (22683) NEOPIXEL: LED 34[0m
+[0;32mI (23283) NEOPIXEL: LED 35[0m
+[0;32mI (23883) NEOPIXEL: LED 36[0m
+[0;32mI (24483) NEOPIXEL: LED 37[0m
+[0;32mI (25083) NEOPIXEL: LED 38[0m
+[0;32mI (25683) NEOPIXEL: LED 39[0m
+[0;32mI (26283) NEOPIXEL: LED 40[0m
+[0;32mI (26883) NEOPIXEL: LED 41[0m
+[0;32mI (27483) NEOPIXEL: LED 42[0m
+[0;32mI (28083) NEOPIXEL: LED 43[0m
+[0;32mI (28683) NEOPIXEL: LED 44[0m
+[0;32mI (29283) NEOPIXEL: LED 45[0m
+[0;32mI (29883) NEOPIXEL: LED 46[0m
+[0;32mI (30483) NEOPIXEL: LED 47[0m
+[0;32mI (31083) NEOPIXEL: LED 48[0m
+[0;32mI (31683) NEOPIXEL: LED 49[0m
+[0;32mI (32283) NEOPIXEL: LED 50[0m
+[0;32mI (32883) NEOPIXEL: LED 51[0m
+[0;32mI (33483) NEOPIXEL: LED 52[0m
+[0;32mI (34083) NEOPIXEL: LED 53[0m
+[0;32mI (34683) NEOPIXEL: LED 54[0m
+[0;32mI (35283) NEOPIXEL: LED 55[0m
+[0;32mI (35883) NEOPIXEL: LED 56[0m
+[0;32mI (36483) NEOPIXEL: LED 57[0m
+[0;32mI (37083) NEOPIXEL: LED 58[0m
+[0;32mI (37683) NEOPIXEL: LED 59[0m
+[0;32mI (38283) NEOPIXEL: LED 60[0m
+[0;32mI (38883) NEOPIXEL: LED 61[0m
+[0;32mI (39483) NEOPIXEL: LED 62[0m
+[0;32mI (40083) NEOPIXEL: LED 63[0m
+[0;32mI (40683) NEOPIXEL: LED 64[0m
+[0;32mI (41283) NEOPIXEL: LED 65[0m
+[0;32mI (41883) NEOPIXEL: LED 66[0m
+[0;32mI (42483) NEOPIXEL: LED 67[0m
+[0;32mI (43083) NEOPIXEL: LED 68[0m
+[0;32mI (43683) NEOPIXEL: LED 69[0m
+[0;32mI (44283) NEOPIXEL: LED 70[0m
+[0;32mI (44883) NEOPIXEL: LED 71[0m
+[0;32mI (45483) NEOPIXEL: LED 72[0m
+[0;32mI (46083) NEOPIXEL: LED 73[0m
+[0;32mI (46683) NEOPIXEL: LED 74[0m
+[0;32mI (47283) NEOPIXEL: LED 75[0m
+[0;32mI (47883) NEOPIXEL: LED 76[0m
+[0;32mI (48483) NEOPIXEL: LED 77[0m
+[0;32mI (49083) NEOPIXEL: LED 78[0m
+[0;32mI (49683) NEOPIXEL: LED 79[0m
+[0;32mI (50283) NEOPIXEL: LED 80[0m
+[0;32mI (50883) NEOPIXEL: LED 81[0m
+[0;32mI (51483) NEOPIXEL: LED 82[0m
+[0;32mI (52083) NEOPIXEL: LED 83[0m
+[0;32mI (52683) NEOPIXEL: LED 84[0m
+[0;32mI (53283) NEOPIXEL: LED 85[0m
+[0;32mI (53883) NEOPIXEL: LED 86[0m
+[0;32mI (54483) NEOPIXEL: LED 87[0m
+[0;32mI (55083) NEOPIXEL: LED 88[0m
+[0;32mI (55683) NEOPIXEL: LED 89[0m
+[0;32mI (56283) NEOPIXEL: LED 90[0m
+[0;32mI (56883) NEOPIXEL: LED 91[0m
+[0;32mI (57483) NEOPIXEL: LED 92[0m
+[0;32mI (58083) NEOPIXEL: LED 93[0m
+[0;32mI (58683) NEOPIXEL: LED 94[0m
+[0;32mI (59283) NEOPIXEL: LED 95[0m
+[0;32mI (59883) NEOPIXEL: LED 96[0m
+[0;32mI (60483) NEOPIXEL: LED 97[0m
+[0;32mI (61083) NEOPIXEL: LED 98[0m
+[0;32mI (61683) NEOPIXEL: LED 99[0m
+[0;32mI (65003) NEOPIXEL: IN PRESS......[0m
+[0;32mI (65503) NEOPIXEL: IN PRESS......[0m
+[0;32mI (65503) NEOPIXEL: Click count: 2[0m
+[0;32mI (65503) NEOPIXEL: Second press[0m
+[0;32mI (65503) NEOPIXEL: LED 0[0m
+[0;32mI (66103) NEOPIXEL: LED 1[0m
+[0;32mI (66703) NEOPIXEL: LED 2[0m
+[0;32mI (67303) NEOPIXEL: LED 3[0m
+[0;32mI (67903) NEOPIXEL: LED 4[0m
+[0;32mI (68503) NEOPIXEL: LED 5[0m
+[0;32mI (69103) NEOPIXEL: LED 6[0m
+[0;32mI (69703) NEOPIXEL: LED 7[0m
+[0;32mI (70303) NEOPIXEL: LED 8[0m
+[0;32mI (70903) NEOPIXEL: LED 9[0m
+[0;32mI (71503) NEOPIXEL: LED 10[0m
+[0;32mI (72103) NEOPIXEL: LED 11[0m
+[0;32mI (72703) NEOPIXEL: LED 12[0m
+[0;32mI (73303) NEOPIXEL: LED 13[0m
+[0;32mI (73903) NEOPIXEL: LED 14[0m
+[0;32mI (74503) NEOPIXEL: LED 15[0m
+[0;32mI (75103) NEOPIXEL: LED 16[0m
+[0;32mI (75703) NEOPIXEL: LED 17[0m
+[0;32mI (76303) NEOPIXEL: LED 18[0m
+[0;32mI (76903) NEOPIXEL: LED 19[0m
+[0;32mI (77503) NEOPIXEL: LED 20[0m
+[0;32mI (78103) NEOPIXEL: LED 21[0m
+[0;32mI (78703) NEOPIXEL: LED 22[0m
+[0;32mI (79303) NEOPIXEL: LED 23[0m
+[0;32mI (79903) NEOPIXEL: LED 24[0m
+[0;32mI (80503) NEOPIXEL: LED 25[0m
+[0;32mI (81103) NEOPIXEL: LED 26[0m
+[0;32mI (81703) NEOPIXEL: LED 27[0m
+[0;32mI (82303) NEOPIXEL: LED 28[0m
+[0;32mI (82903) NEOPIXEL: LED 29[0m
+[0;32mI (83503) NEOPIXEL: LED 30[0m
+[0;32mI (84103) NEOPIXEL: LED 31[0m
+[0;32mI (84703) NEOPIXEL: LED 32[0m
+[0;32mI (85303) NEOPIXEL: LED 33[0m
+[0;32mI (85903) NEOPIXEL: LED 34[0m
+[0;32mI (86503) NEOPIXEL: LED 35[0m
+[0;32mI (87103) NEOPIXEL: LED 36[0m
+[0;32mI (87703) NEOPIXEL: LED 37[0m
+[0;32mI (88303) NEOPIXEL: LED 38[0m
+[0;32mI (88903) NEOPIXEL: LED 39[0m
+[0;32mI (89503) NEOPIXEL: LED 40[0m
+[0;32mI (90103) NEOPIXEL: LED 41[0m
+[0;32mI (90703) NEOPIXEL: LED 42[0m
+[0;32mI (91303) NEOPIXEL: LED 43[0m
+[0;32mI (91903) NEOPIXEL: LED 44[0m
+[0;32mI (92503) NEOPIXEL: LED 45[0m
+[0;32mI (93103) NEOPIXEL: LED 46[0m
+[0;32mI (93703) NEOPIXEL: LED 47[0m
+[0;32mI (94303) NEOPIXEL: LED 48[0m
+[0;32mI (94903) NEOPIXEL: LED 49[0m
+[0;32mI (95503) NEOPIXEL: LED 50[0m
+[0;32mI (96103) NEOPIXEL: LED 51[0m
+[0;32mI (96703) NEOPIXEL: LED 52[0m
+[0;32mI (97303) NEOPIXEL: LED 53[0m
+[0;32mI (97903) NEOPIXEL: LED 54[0m
+[0;32mI (98503) NEOPIXEL: LED 55[0m
+[0;32mI (99103) NEOPIXEL: LED 56[0m
+[0;32mI (99703) NEOPIXEL: LED 57[0m
+[0;32mI (100303) NEOPIXEL: LED 58[0m
+[0;32mI (100903) NEOPIXEL: LED 59[0m
+[0;32mI (101503) NEOPIXEL: LED 60[0m
+[0;32mI (102103) NEOPIXEL: LED 61[0m
+[0;32mI (102703) NEOPIXEL: LED 62[0m
+[0;32mI (103303) NEOPIXEL: LED 63[0m
+[0;32mI (103903) NEOPIXEL: LED 64[0m
+[0;32mI (104503) NEOPIXEL: LED 65[0m
+[0;32mI (105103) NEOPIXEL: LED 66[0m
+[0;32mI (105703) NEOPIXEL: LED 67[0m
+[0;32mI (106303) NEOPIXEL: LED 68[0m
+[0;32mI (106903) NEOPIXEL: LED 69[0m
+[0;32mI (107503) NEOPIXEL: LED 70[0m
+[0;32mI (108103) NEOPIXEL: LED 71[0m
+[0;32mI (108703) NEOPIXEL: LED 72[0m
+[0;32mI (109303) NEOPIXEL: LED 73[0m
+[0;32mI (109903) NEOPIXEL: LED 74[0m
+[0;32mI (110503) NEOPIXEL: LED 75[0m
+[0;32mI (111103) NEOPIXEL: LED 76[0m
+[0;32mI (111703) NEOPIXEL: LED 77[0m
+[0;32mI (112303) NEOPIXEL: LED 78[0m
+[0;32mI (112903) NEOPIXEL: LED 79[0m
+[0;32mI (113503) NEOPIXEL: LED 80[0m
+[0;32mI (114103) NEOPIXEL: LED 81[0m
+[0;32mI (114703) NEOPIXEL: LED 82[0m
+[0;32mI (115303) NEOPIXEL: LED 83[0m
+[0;32mI (115903) NEOPIXEL: LED 84[0m
+[0;32mI (116503) NEOPIXEL: LED 85[0m
+[0;32mI (117103) NEOPIXEL: LED 86[0m
+[0;32mI (117703) NEOPIXEL: LED 87[0m
+[0;32mI (118303) NEOPIXEL: LED 88[0m
+[0;32mI (118903) NEOPIXEL: LED 89[0m
+[0;32mI (119503) NEOPIXEL: LED 90[0m
+[0;32mI (120103) NEOPIXEL: LED 91[0m
+[0;32mI (120703) NEOPIXEL: LED 92[0m
+[0;32mI (121303) NEOPIXEL: LED 93[0m
+[0;32mI (121903) NEOPIXEL: LED 94[0m
+[0;32mI (122503) NEOPIXEL: LED 95[0m
+[0;32mI (123103) NEOPIXEL: LED 96[0m
+[0;32mI (123703) NEOPIXEL: LED 97[0m
+[0;32mI (124303) NEOPIXEL: LED 98[0m
+[0;32mI (124903) NEOPIXEL: LED 99[0m
